@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/modal.css">
+    <title>Cadastro de funcionários</title>
+</head>
+<body>
+    <header>
+        <div class="titulo"><h1>CADASTRE SEUS funcionários</h1></div>
+    </header>
+    <main>
+        <button class="button cadastro" id="cadastrarFuncionario">Cadastrar funcionários</button>
+        <table id="tableClient" class="form">
+            <thead>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>telefone</th>
+                <th>Salário</th>
+                <th>Ação</th>
+            </thead>
+            <tbody>
+                <!-- 
+                <tr>
+                    <td>Maria</td>
+                    <td>Maria@gmail.com</td>
+                    <td>(19)99593-2812</td>
+                    <td>R$2000.00</td>
+                    <td>
+                        
+                        <button type="button" class="button green" >Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>João</td>
+                    <td>João@gmail.com</td>
+                    <td>(19)99593-2812</td>
+                    <td>R$1500.00</td>
+                    <td>
+                        
+                        <button type="button" class="button green" >Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    
+                    </td>
+                </tr>
+                -->
+                <span>O gasto mensal será de <span id="span"></span></span>
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modalContent">
+                <h2>Novo cliente</h2>
+            <form id="form">
+                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Digite o nome" required>
+                <input type="email" id="email" class="modal-field" placeholder="Digite o e-mail" required>
+                <input type="text" id="telefone" class="modal-field" placeholder="Digite o telefone" required>
+                <input type="text" id="salario" class="modal-field salario" placeholder="Salário planejado" required>
+            </form>
+            <div class="ContentFooter">
+                <button class="button green" id="salvar">Salvar</button>
+                <button class="button red" id="cancelar">Cancelar</button>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="/assets/javascript/script.js"></script>
+</body>
+</html>

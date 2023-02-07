@@ -1,0 +1,53 @@
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0, 0, 0.3);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+}
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+}
+.modalContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    padding: 10px;
+    background-color: white;
+    gap: 20px;
+    text-align: center;
+}
+.modalContent form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.modalContent form input{
+    width: 40%;
+    padding: 20px;
+}
+.modalContent form input::placeholder{
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .modalContent{
+        width: 100%;
+        height: 40%;;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .modalContent form input{
+        width: 40%;
+    }
+}

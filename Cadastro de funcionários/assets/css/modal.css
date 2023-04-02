@@ -50,4 +50,7 @@
     .modalContent form input{
         width: 40%;
     }
+    .modalContent form input::placeholder{
+        font-size: 8px;
+    }
 }

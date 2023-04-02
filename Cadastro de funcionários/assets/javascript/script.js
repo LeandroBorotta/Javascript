@@ -153,4 +153,57 @@ document.querySelector('#tableClient>tbody')
    updateAmount()
 
 
+   const inputs = document.querySelectorAll(".modal-field")
+   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+   const errorValidate = (index) => {
+    inputs[index].style.border = "2px solid red"
+   }
+   const goodValidate = (index) => {
+    inputs[index].style.border = "2px solid green"
+   }
+
+    function validName(){
+        if(inputs[0].value.length < 3){
+           errorValidate(0);
+
+        } else{
+            goodValidate(0)
+        }
+    }
+
+    function validTelefone(){
+        const limite = 13
+        
+        if(inputs[2].value.length  < 13){
+            errorValidate(2);
+         } else{
+            goodValidate(2);
+         }
+
+        if(inputs[2].value.length > limite){
+           inputs[2].value = inputs[2].value.substring(0, limite);
+         }
+
+        if(inputs[2].value.length === 8){
+            inputs[2].value += "-";
+        } else if (inputs[2].value.length === 2){
+            inputs[2].value += "-";
+        }
+    }
+
+    function validEmail(){
+        if(emailRegex.test(inputs[1].value)){
+            console.log("Valido")
+            inputs[1].style.border = "2px solid green"
+        } else{
+            inputs[1].style.border = "2px solid red"
+        }
+    }
+
+    function validSalario(){
+        if(inputs[3].value.length > 1){
+            inputs[3].style.border = "2px solid green"
+        }
+    }
+
     

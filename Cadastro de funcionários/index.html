@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <title>Cadastro de funcionários</title>
 </head>
 <body>
@@ -55,12 +55,12 @@
         </table>
         <div class="modal" id="modal">
             <div class="modalContent">
-                <h2>Novo cliente</h2>
+                <h2>Novo Funcionário</h2>
             <form id="form">
-                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Digite o nome" required>
-                <input type="email" id="email" class="modal-field" placeholder="Digite o e-mail" required>
-                <input type="text" id="telefone" class="modal-field" placeholder="Digite o telefone" required>
-                <input type="text" id="salario" class="modal-field salario" placeholder="Salário planejado" required>
+                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Digite o nome" oninput="validName()" required>
+                <input type="email" id="email" class="modal-field" placeholder="Digite o e-mail" oninput="validEmail()" required>
+                <input type="text" id="telefone" class="modal-field" placeholder="Digite o telefone" oninput="validTelefone()" required>
+                <input type="text" id="salario" class="modal-field salario" placeholder="Salário planejado" oninput="validSalario()" required>
             </form>
             <div class="ContentFooter">
                 <button class="button green" id="salvar">Salvar</button>
@@ -70,6 +70,6 @@
         </div>
     </main>
 
-    <script src="/assets/javascript/script.js"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
 </html>
